@@ -1,2 +1,55 @@
 /*CSS DOCUMENT*/
 @charset "UTF-8";
+
+
+/*Colores de recoleta:
+CREMA Recoleta: #F6F4F0
+VERDE Recoleta: #DBE88E
+LILA Recoleta: #7368C6
+VIOLETA Recoleta: 2F1C49*/
+
+
+
+
+/*ESTA FUENTE NO VA, HAY QUE PONERLE LA OTRA Y CAMBIAR LOS LINKS DE LOS HTML, ES PARA USAR DE EJEMPLO*/
+@font-face {
+    .cardo-regular {
+        font-family: "Cardo", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .cardo-bold {
+        font-family: "Cardo", serif;
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    .cardo-regular-italic {
+        font-family: "Cardo", serif;
+        font-weight: 400;
+        font-style: italic;
+    }
+
+}
+
+
+@font-face {
+    font-family: "quorum";
+    src: url("fonts/ITC Quorum Black Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    font-family: "quorum"; 
+}
+
+body {
+    background-color: #F6F4F0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
