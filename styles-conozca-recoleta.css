@@ -1,14 +1,12 @@
 /*CSS DOCUMENT*/
 @charset "UTF-8";
 
-
-/*Colores de recoleta:
-CREMA Recoleta: #F6F4F0
-VERDE Recoleta: #DBE88E
-LILA Recoleta: #7368C6
-VIOLETA Recoleta: #2F1C49*/
-
-
+:root {
+  --violeta-recoleta: #2F1C49;
+  --lila-recoleta: #7368C6;
+  --verde-recoleta: #DBE88E;
+  --crema-recoleta: #F6F4F0;
+}
 
 
 
@@ -92,8 +90,8 @@ VIOLETA Recoleta: #2F1C49*/
 }
 
 body {
-    background-color: #F6F4F0;
-    color: #2F1C49;
+    background-color: var(--crema-recoleta);
+    color: var(--violeta-recoleta);
     font-family: 'Asap', sans-serif;
     margin: 0;
     padding: 0;
@@ -213,7 +211,6 @@ p, .bloque-texto {
 
 
 
-/*hola hola hola*/
 
 
 
@@ -230,7 +227,7 @@ p, .bloque-texto {
 /*////////////////MOBILE//////////////////////*/
 @media (max-width: 768px) {
     body {
-        background-color: #F6F4F0;
+        background-color: var(--crema-recoleta);
         margin: 0;
         padding: 0;
         width: 100%;
