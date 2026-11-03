@@ -13,7 +13,7 @@ VIOLETA Recoleta: 2F1C49*/
 
 
 
-///////////////////////////*WEB*////////////////////////
+/*//////////////////////////WEB///////////////////////*/
 
 
 /*ESTA FUENTE NO VA, HAY QUE PONERLE LA OTRA Y CAMBIAR LOS LINKS DE LOS HTML, ES PARA USAR DE EJEMPLO*/
@@ -110,7 +110,7 @@ body {
 
 
 
-/////////////////*MOBILE*////////////////////////
+/*////////////////MOBILE///////////////////////*/
 @media (max-width: 768px) {
     body {
         background-color: #F6F4F0;
