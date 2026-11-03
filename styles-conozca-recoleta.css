@@ -13,32 +13,10 @@ VIOLETA Recoleta: 2F1C49*/
 
 
 
-///////////////////////////*WEB*////////////////////////
+/*//////////////////////////WEB///////////////////////*/
 
 
-/*ESTA FUENTE NO VA, HAY QUE PONERLE LA OTRA Y CAMBIAR LOS LINKS DE LOS HTML, ES PARA USAR DE EJEMPLO*/
-@font-face {
-    .cardo-regular {
-        font-family: "Cardo", serif;
-        font-weight: 400;
-        font-style: normal;
-    }
-
-    .cardo-bold {
-        font-family: "Cardo", serif;
-        font-weight: 700;
-        font-style: normal;
-    }
-
-    .cardo-regular-italic {
-        font-family: "Cardo", serif;
-        font-weight: 400;
-        font-style: italic;
-    }
-
-}
-
-
+/* Quorum (Logo y animación CONOZCA RECOLETA) */
 @font-face {
     font-family: "quorum";
     src: url("fonts/ITC Quorum Black Regular.otf") format("opentype");
@@ -46,19 +24,154 @@ VIOLETA Recoleta: 2F1C49*/
     font-style: normal;
 }
 
-h1 {
-    font-family: "quorum";
+/* Inter (Fuente Variable - maneja todos los grosores) */
+@font-face {
+    font-family: "Inter";
+    src: url("fonts/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+/* Asap - Regular */
+@font-face {
+    font-family: "Asap";
+    src: url("fonts/Asap-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Asap - Medium */
+@font-face {
+    font-family: "Asap";
+    src: url("fonts/Asap-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Asap - Medium Italic */
+@font-face {
+    font-family: "Asap";
+    src: url("fonts/Asap-MediumItalic.ttf") format("truetype");
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* Asap - SemiBold */
+@font-face {
+    font-family: "Asap";
+    src: url("fonts/Asap-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Asap - Bold */
+@font-face {
+    font-family: "Asap";
+    src: url("fonts/Asap-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Asap - Bold Italic */
+@font-face {
+    font-family: "Asap";
+    src: url("fonts/Asap-BoldItalic.ttf") format("truetype");
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* Asap - Italic (Regular Italic) */
+@font-face {
+    font-family: "Asap";
+    src: url("fonts/Asap-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* ========================================== */
+/* 3. ESTILOS BASE Y RESET                    */
+/* ========================================== */
+* {
+    box-sizing: border-box;
 }
 
 body {
-    background-color: #F6F4F0;
+    background-color: var(--crema);
+    color: var(--violeta);
+    font-family: 'Asap', sans-serif;
     margin: 0;
     padding: 0;
     width: 100%;
     overflow-x: hidden;
-    box-sizing: border-box;
 }
 
+/* ========================================== */
+/* 4. JERARQUÍAS Y TIPOGRAFÍAS                */
+/* ========================================== */
+
+/* Títulos principales o animados (Quorum) */
+h1 {
+    font-family: "quorum", sans-serif;
+    font-weight: normal;
+}
+
+/* Subtítulos grandes (Inter Bold 70) */
+h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 70px;
+}
+
+/* Subtítulos Asap Semibold 29 */
+h3 {
+    font-family: 'Asap', sans-serif;
+    font-weight: 600;
+    font-size: 29px;
+}
+
+/* Subtítulos Asap Bold 26 */
+h4 {
+    font-family: 'Asap', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+}
+
+/* Bloques de lectura (Asap Medium 18) */
+.bloque-lectura {
+    font-family: 'Asap', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+/* Copetes (Inter Medium Italic 18) */
+.copete {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 18px;
+}
+
+/* Bloque de texto (Asap Regular 12) */
+p, .bloque-texto {
+    font-family: 'Asap', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* Menú hamburguesa (Asap Regular 13) */
+.menu-hamburguesa {
+    font-family: 'Asap', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+/* Sección footer (Asap Regular 11) */
+.footer-seccion {
+    font-family: 'Asap', sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+}
 
 /*HEADER*/
 
@@ -110,7 +223,7 @@ body {
 
 
 
-/////////////////*MOBILE*////////////////////////
+/*////////////////*MOBILE*/
 @media (max-width: 768px) {
     body {
         background-color: #F6F4F0;
