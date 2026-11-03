@@ -11,6 +11,11 @@ VIOLETA Recoleta: 2F1C49*/
 
 
 
+
+
+///////////////////////////*WEB*////////////////////////
+
+
 /*ESTA FUENTE NO VA, HAY QUE PONERLE LA OTRA Y CAMBIAR LOS LINKS DE LOS HTML, ES PARA USAR DE EJEMPLO*/
 @font-face {
     .cardo-regular {
@@ -42,7 +47,7 @@ VIOLETA Recoleta: 2F1C49*/
 }
 
 h1 {
-    font-family: "quorum"; 
+    font-family: "quorum";
 }
 
 body {
@@ -53,3 +58,111 @@ body {
     overflow-x: hidden;
     box-sizing: border-box;
 }
+
+
+/*HEADER*/
+
+
+
+
+
+
+
+/*INDEX*/
+
+
+
+
+
+
+/*AGENDA*/
+
+
+
+
+
+/*GASTRONOMIA*/
+
+
+
+
+/*CEMENTERIO*/
+
+
+
+
+/*CENTRO CULRTURAL*/
+
+
+
+
+
+
+
+
+
+
+/*FOOTER*/
+
+
+
+
+
+
+
+/////////////////*MOBILE*////////////////////////
+@media (max-width: 768px) {
+    body {
+        background-color: #F6F4F0;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+}
+
+
+/*HEADER*/
+
+
+
+
+
+
+
+/*INDEX*/
+
+
+
+
+
+
+/*AGENDA*/
+
+
+
+
+
+/*GASTRONOMIA*/
+
+
+
+
+/*CEMENTERIO*/
+
+
+
+
+/*CENTRO CULRTURAL*/
+
+
+
+
+
+
+
+
+
+
+/*FOOTER*/
