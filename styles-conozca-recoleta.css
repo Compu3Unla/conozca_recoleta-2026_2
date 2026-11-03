@@ -6,40 +6,10 @@
 CREMA Recoleta: #F6F4F0
 VERDE Recoleta: #DBE88E
 LILA Recoleta: #7368C6
-VIOLETA Recoleta: 2F1C49*/
+VIOLETA Recoleta: #2F1C49*/
 
 
 
-
-
-
-/*//////////////////////////WEB///////////////////////*/
-<<<<<<< HEAD
-
-
-/*ESTA FUENTE NO VA, HAY QUE PONERLE LA OTRA Y CAMBIAR LOS LINKS DE LOS HTML, ES PARA USAR DE EJEMPLO*/
-@font-face {
-    .cardo-regular {
-        font-family: "Cardo", serif;
-        font-weight: 400;
-        font-style: normal;
-    }
-
-    .cardo-bold {
-        font-family: "Cardo", serif;
-        font-weight: 700;
-        font-style: normal;
-    }
-
-    .cardo-regular-italic {
-        font-family: "Cardo", serif;
-        font-weight: 400;
-        font-style: italic;
-    }
-
-}
-=======
->>>>>>> 1f9db0feb09e48eafe9ad56b0c0102db8ba396fa
 
 
 /* Quorum (Logo y animación CONOZCA RECOLETA) */
@@ -122,8 +92,8 @@ VIOLETA Recoleta: 2F1C49*/
 }
 
 body {
-    background-color: var(--crema);
-    color: var(--violeta);
+    background-color: #F6F4F0;
+    color: #2F1C49;
     font-family: 'Asap', sans-serif;
     margin: 0;
     padding: 0;
@@ -199,6 +169,11 @@ p, .bloque-texto {
     font-size: 11px;
 }
 
+/*//////////////////////////WEB////////////////////////////*/
+
+
+
+
 /*HEADER*/
 
 
@@ -249,11 +224,7 @@ p, .bloque-texto {
 
 
 
-<<<<<<< HEAD
-/*////////////////MOBILE///////////////////////*/
-=======
-/*////////////////*MOBILE*/
->>>>>>> 1f9db0feb09e48eafe9ad56b0c0102db8ba396fa
+/*////////////////MOBILE//////////////////////*/
 @media (max-width: 768px) {
     body {
         background-color: #F6F4F0;
