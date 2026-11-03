@@ -13,7 +13,7 @@ VIOLETA Recoleta: 2F1C49*/
 
 
 
-/*WEB*/
+///////////////////////////*WEB*////////////////////////
 
 
 /*ESTA FUENTE NO VA, HAY QUE PONERLE LA OTRA Y CAMBIAR LOS LINKS DE LOS HTML, ES PARA USAR DE EJEMPLO*/
@@ -47,7 +47,7 @@ VIOLETA Recoleta: 2F1C49*/
 }
 
 h1 {
-    font-family: "quorum"; 
+    font-family: "quorum";
 }
 
 body {
@@ -60,6 +60,38 @@ body {
 }
 
 
+/*HEADER*/
+
+
+
+
+
+
+
+/*INDEX*/
+
+
+
+
+
+
+/*AGENDA*/
+
+
+
+
+
+/*GASTRONOMIA*/
+
+
+
+
+/*CEMENTERIO*/
+
+
+
+
+/*CENTRO CULRTURAL*/
 
 
 
@@ -69,7 +101,16 @@ body {
 
 
 
-/*MOBILE*/
+
+/*FOOTER*/
+
+
+
+
+
+
+
+/////////////////*MOBILE*////////////////////////
 @media (max-width: 768px) {
     body {
         background-color: #F6F4F0;
@@ -80,3 +121,48 @@ body {
         box-sizing: border-box;
     }
 }
+
+
+/*HEADER*/
+
+
+
+
+
+
+
+/*INDEX*/
+
+
+
+
+
+
+/*AGENDA*/
+
+
+
+
+
+/*GASTRONOMIA*/
+
+
+
+
+/*CEMENTERIO*/
+
+
+
+
+/*CENTRO CULRTURAL*/
+
+
+
+
+
+
+
+
+
+
+/*FOOTER*/
