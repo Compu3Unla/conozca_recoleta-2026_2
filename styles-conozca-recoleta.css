@@ -2,10 +2,10 @@
 @charset "UTF-8";
 
 :root {
-  --violeta-recoleta: #2F1C49;
-  --lila-recoleta: #7368C6;
-  --verde-recoleta: #DBE88E;
-  --crema-recoleta: #F6F4F0;
+    --violeta-recoleta: #2F1C49;
+    --lila-recoleta: #7368C6;
+    --verde-recoleta: #DBE88E;
+    --crema-recoleta: #F6F4F0;
 }
 
 
@@ -36,7 +36,7 @@
 
 /* Asap - Medium */
 @font-face {
-    font-family: "Asap";
+    font-family: "Asap-medium";
     src: url("fonts/Asap-Medium.ttf") format("truetype");
     font-weight: 500;
     font-style: normal;
@@ -44,7 +44,7 @@
 
 /* Asap - Medium Italic */
 @font-face {
-    font-family: "Asap";
+    font-family: "Asap-mediumitalic";
     src: url("fonts/Asap-MediumItalic.ttf") format("truetype");
     font-weight: 500;
     font-style: italic;
@@ -52,7 +52,7 @@
 
 /* Asap - SemiBold */
 @font-face {
-    font-family: "Asap";
+    font-family: "Asap-semibold";
     src: url("fonts/Asap-SemiBold.ttf") format("truetype");
     font-weight: 600;
     font-style: normal;
@@ -60,7 +60,7 @@
 
 /* Asap - Bold */
 @font-face {
-    font-family: "Asap";
+    font-family: "Asap-bold";
     src: url("fonts/Asap-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
@@ -68,7 +68,7 @@
 
 /* Asap - Bold Italic */
 @font-face {
-    font-family: "Asap";
+    font-family: "Asap-bolditalic";
     src: url("fonts/Asap-BoldItalic.ttf") format("truetype");
     font-weight: 700;
     font-style: italic;
@@ -76,7 +76,7 @@
 
 /* Asap - Italic (Regular Italic) */
 @font-face {
-    font-family: "Asap";
+    font-family: "Asap-italic";
     src: url("fonts/Asap-Italic.ttf") format("truetype");
     font-weight: 400;
     font-style: italic;
@@ -125,7 +125,7 @@ h3 {
 
 /* Subtítulos Asap Bold 26 */
 h4 {
-    font-family: 'Asap', sans-serif;
+    font-family: 'Asap-bold', sans-serif;
     font-weight: 700;
     font-size: 26px;
 }
@@ -146,7 +146,8 @@ h4 {
 }
 
 /* Bloque de texto (Asap Regular 12) */
-p, .bloque-texto {
+p,
+.bloque-texto {
     font-family: 'Asap', sans-serif;
     font-weight: 400;
     font-size: 12px;
@@ -174,11 +175,47 @@ p, .bloque-texto {
 
 /*HEADER*/
 
+nav a {
+    text-decoration: none;
+}
 
+.header-container {
+    box-shadow: 0px 2px 10px var(--violeta-recoleta);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 75px;
+    gap: 20px;
+    font-family: 'Asap-semibold';
+}
 
+.header-navegacion {
+    display: flex;
+    gap: 70px;
+}
 
+.header-idiomas {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
 
+.header-contacto {
+    color: var(--crema-recoleta);
+    border-radius: 100px;
+    padding: 12px 20px;
+    background: var(--violeta-recoleta);
+    /* Acá tendría que estar el "Radicheta-recoleta" que falta */
+}
 
+.input-buscar {
+    background: transparent;
+    border: 2px solid var(--violeta-recoleta);
+    border-radius: 100px;
+    padding: 11px 12px;
+    font-size: 16px;
+    font-family: 'Asap-semibold';
+}
 
 /*INDEX*/
 
