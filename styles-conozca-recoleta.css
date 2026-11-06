@@ -103,39 +103,44 @@ body {
 /* 4. JERARQUÍAS Y TIPOGRAFÍAS                */
 /* ========================================== */
 
-/* Títulos principales o animados (Quorum) */
+/* Títulos principales */
 h1 {
-    font-family: "quorum", sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: normal;
+    font-size: 60px;
 }
 
-/* Subtítulos grandes (Inter Bold 70) */
+/* Subtítulos grandes (Inter Bold 30) */
 h2 {
     font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 70px;
+    font-weight: bold;
+    font-size: 30px;
 }
 
-/* Subtítulos Asap Semibold 29 */
+/* Subtítulos Asap Semibold 24 */
 h3 {
     font-family: 'Asap', sans-serif;
-    font-weight: 600;
-    font-size: 29px;
+    font-weight: medium;
+    font-size: 24px;
 }
 
-/* Subtítulos Asap Bold 26 */
+/* Detalles minúsculos Asap regular 15 */
 h4 {
-    font-family: 'Asap-bold', sans-serif;
+    font-family: 'Asap', sans-serif;
     font-weight: 700;
     font-size: 26px;
 }
 
-/* Bloques de lectura (Asap Medium 18) */
+/* Bloques de lectura (Asap Medium 20) */
 .bloque-lectura {
     font-family: 'Asap', sans-serif;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 20px;
 }
+
+/* CHICOS! HASTA ACÁ CAMBIÉ LAS TIPOS, CON LO QUE HABIAMOS DEFINIDO*/
+/* esta parte ya no lo toco por las dudas*/
+
 
 /* Copetes (Inter Medium Italic 18) */
 .copete {
