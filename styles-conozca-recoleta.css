@@ -969,7 +969,207 @@ hr {
 
 
 /*AGENDA*/
+.agenda-seccion {
+    width: 100%;
+    margin-top: 140px; /* Salva el header fijo superior */
+    padding-bottom: 80px;
+    padding-left: 100px;
+    padding-right: 100px;
+    box-sizing: border-box;
+}
 
+/* Título Principal */
+.agenda-titulo-principal {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 38px;
+    color: var(--lila-recoleta);
+    border-bottom: 2px solid var(--lila-recoleta);
+    padding-bottom: 10px;
+    max-width: 1050px;
+    margin: 0 auto 40px auto;
+}
+
+/* Tarjeta contenedora de evento */
+.tarjeta-agenda {
+    width: 100%;
+    background-color: transparent;
+    margin-bottom: 50px;
+    transition: background-color 0.2s ease;
+    padding-bottom: 25px;
+}
+
+/* Efecto hover: El fondo verde ocupa todo el ancho de la pantalla */
+.tarjeta-agenda:hover {
+    background-color: var(--verde-recoleta);
+}
+
+/* Contenido interno alineado a los ejes */
+.agenda-contenido-interno {
+    max-width: 1050px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 25px 0;
+}
+
+/* Grupo izquierdo (Número + Baldosa/Fecha) */
+.agenda-grupo-fecha {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.agenda-numero {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 240px;
+    color: var(--violeta-recoleta);
+    line-height: 0.75;
+    margin: 0;
+}
+
+.agenda-columna-fecha {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Baldosa y foto en hover */
+.agenda-contenedor-img {
+    position: relative;
+    width: 90px;
+    height: 90px;
+}
+
+.agenda-baldosa {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.agenda-foto {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.tarjeta-agenda:hover .agenda-baldosa {
+    display: none;
+}
+
+.tarjeta-agenda:hover .agenda-foto {
+    display: block;
+}
+
+/* Mes y Año */
+.agenda-texto-mes-anio {
+    font-family: 'Inter', sans-serif;
+    color: var(--violeta-recoleta);
+    margin-top: 8px;
+    white-space: nowrap;
+}
+
+.agenda-mes {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 38px;
+}
+
+.agenda-barra {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    margin: 0 2px;
+}
+
+.agenda-anio {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+}
+
+/* Bloque derecho con margen izquierdo ampliado para separarlo de la fecha */
+.agenda-info-evento {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self: flex-start;
+    margin-top: 5px;
+    margin-left: 90px; 
+    max-width: 450px;
+}
+
+/* Subtítulo Propuesta (Asap Medium) */
+.agenda-subtitulo {
+    font-family: 'Asap-medium', 'Asap', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--violeta-recoleta);
+    margin: 0;
+}
+
+/* Nombre del evento (Asap Medium) */
+.agenda-nombre {
+    font-family: 'Asap-medium', 'Asap', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    color: var(--violeta-recoleta);
+    margin: 4px 0 0 0;
+}
+
+/* Descripción que aparece en hover (En Asap Medium como pediste) */
+.agenda-descripcion {
+    display: none;
+    font-family: 'Asap-medium', 'Asap', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--violeta-recoleta);
+    line-height: 1.4;
+    margin: 8px 0 0 0;
+}
+
+.tarjeta-agenda:hover .agenda-descripcion {
+    display: block;
+}
+
+/* Franja violeta inferior (ocupa el 100% de la pantalla) */
+.agenda-franja-violeta {
+    width: 100%;
+    background-color: var(--lila-recoleta);
+    margin-top: 10px;
+}
+
+/* Contenedor interno de la franja alineado a los ejes */
+.agenda-franja-interno {
+    max-width: 1050px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    box-sizing: border-box;
+}
+
+.agenda-direccion {
+    font-family: 'Asap-bold', 'Asap', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--crema-recoleta);
+    margin: 0;
+}
+
+.agenda-categoria {
+    font-family: 'Asap-medium', 'Asap', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--crema-recoleta);
+    margin: 0;
+}
 
 
 
