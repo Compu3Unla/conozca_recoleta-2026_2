@@ -10,15 +10,78 @@
 </head>
 
 <body>
-    <header>
+ <header>
         <nav class="header-container">
             <div class="header-logo">
                 <a href="index.html"><img src="img/vectores/header_logotipo.svg" alt="header-logotipo"
                         width="180px"></a>
             </div>
             <div class="header-navegacion">
-                <a href="agenda.html">Agenda</a>
-                <a href="#">Arte & Cultura</a>
+                <a href="agenda.html" class="header-items">Agenda</a>
+
+
+                <div class="header-dropdown">
+                    <a href="#" class="header-dropdown-boton">
+                        Arte &amp; Cultura
+                        <img src="img/vectores/icono-flecha.svg" alt="" width="15px" class="header-dropdown-flecha">
+                    </a>
+
+                    <div class="dropdown-menu">
+                        <!-- Columna 1 -->
+                        <div class="dropdown-columna">
+                            <h4 class="dropdown-titulo">Museos y Espacios</h4>
+                            <ul class="dropdown-lista">
+                                <li>
+                                    <a href="ccr.html" class="dropdown-link">
+                                        <img src="img/vectores/icono-dropdown.svg" alt="" class="dropdown-icono">
+                                        Centro Cultural Recoleta
+                                    </a>
+                                </li>
+                                <li><span class="dropdown-link"><img src="img/vectores/icono-dropdown.svg" alt=""
+                                            class="dropdown-icono">Museo Nacional de Bellas Artes</span></li>
+                                <li><span class="dropdown-link"><img src="img/vectores/icono-dropdown.svg" alt=""
+                                            class="dropdown-icono">Palais de Glace</span></li>
+                                <li><span class="dropdown-link"><img src="img/vectores/icono-dropdown.svg" alt=""
+                                            class="dropdown-icono">Centro Cultural de la Ciencia</span></li>
+                            </ul>
+                        </div>
+
+                        <!-- Columna 2 -->
+                        <div class="dropdown-columna">
+                            <h4 class="dropdown-titulo">Patrimonio</h4>
+                            <ul class="dropdown-lista">
+                                <li>
+                                    <a href="cementerio.html" class="dropdown-link">
+                                        <img src="img/vectores/icono-dropdown.svg" alt="" class="dropdown-icono">
+                                        Cementerio de la Recoleta
+                                    </a>
+                                </li>
+                                <li><span class="dropdown-link"><img src="img/vectores/icono-dropdown.svg" alt=""
+                                            class="dropdown-icono">Floralis Genérica</span></li>
+                                <li><span class="dropdown-link"><img src="img/vectores/icono-dropdown.svg" alt=""
+                                            class="dropdown-icono">Basílica Nuestra Señora del Pilar</span></li>
+                                <li><span class="dropdown-link"><img src="img/vectores/icono-dropdown.svg" alt=""
+                                            class="dropdown-icono">Plaza Francia</span></li>
+                            </ul>
+                        </div>
+
+                        <!-- Columna 3 -->
+                        <div class="dropdown-columna">
+                            <h4 class="dropdown-titulo">Circuitos</h4>
+                            <ul class="dropdown-lista">
+                                <li><span class="dropdown-link"><img src="img/vectores/icono-dropdown.svg" alt=""
+                                            class="dropdown-icono">Murales e Iconografía Urbana</span></li>
+                                <li><span class="dropdown-link"><img src="img/vectores/icono-dropdown.svg" alt=""
+                                            class="dropdown-icono">Paseo de las Esculturas</span></li>
+                                <li><span class="dropdown-link"><img src="img/vectores/icono-dropdown.svg" alt=""
+                                            class="dropdown-icono">Circuitos de Arte Callejero</span></li>
+                                <li><span class="dropdown-link"><img src="img/vectores/icono-dropdown.svg" alt=""
+                                            class="dropdown-icono">Guías de Recorridos</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
                 <a href="gastronomia.html">Gastronomía</a>
             </div>
             <div class="header-idiomas">
