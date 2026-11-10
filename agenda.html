@@ -7,22 +7,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles-conozca-recoleta.css">
     <link rel="icon" type="ico" href="img/favicon-recoleta-lila.ico">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-    </style> <!--ACÁ VAN LAS FONT QUE SACAMOS DE GOOGLE, NO ME ACUERDO CUALES ERAN JIJI-->
 </head>
 
 
 <body>
-    <header>
+ <header>
         <nav class="header-container">
             <div class="header-logo">
-                <a href="index.html"><img src="/img/vectores/header_logotipo.svg" alt="header-logotipo"
+                <a href="index.html"><img src="img/vectores/header_logotipo.svg" alt="header-logotipo"
                         width="180px"></a>
             </div>
             <div class="header-navegacion">
-                <a href="agenda.html">Agenda</a>
-                <a href="#">Arte & Cultura</a>
+                <a href="agenda.html" class="header-items">Agenda</a>
+
+
+                <div class="header-dropdown">
+                    <a href="#" class="header-dropdown-boton">
+                        Arte &amp; Cultura
+                        <img src="img/vectores/icono-flecha.svg" alt="" width="15px" class="header-dropdown-flecha">
+                    </a>
+
+                    <div class="dropdown-menu">
+                        <!-- Columna 1 -->
+                        <div class="dropdown-columna">
+                            <h4 class="dropdown-titulo">Museos y Espacios</h4>
+                            <ul class="dropdown-lista">
+                                <li>
+                                    <a href="ccr.html" class="dropdown-link">
+                                        <img src="img/vectores/icono-dropdown.svg" alt="" class="dropdown-icono">
+                                        Centro Cultural Recoleta
+                                    </a>
+                                </li>
+                                <li><span class="dropdown-link"><img src="img/vectores/icono-dropdown.svg" alt=""
+                                            class="dropdown-icono">Museo Nacional de Bellas Artes</span></li>
+                                <li><span class="dropdown-link"><img src="img/vectores/icono-dropdown.svg" alt=""
+                                            class="dropdown-icono">Palais de Glace</span></li>
+                                <li><span class="dropdown-link"><img src="img/vectores/icono-dropdown.svg" alt=""
+                                            class="dropdown-icono">Centro Cultural de la Ciencia</span></li>
+                            </ul>
+                        </div>
+
+                        <!-- Columna 2 -->
+                        <div class="dropdown-columna">
+                            <h4 class="dropdown-titulo">Patrimonio</h4>
+                            <ul class="dropdown-lista">
+                                <li>
+                                    <a href="cementerio.html" class="dropdown-link">
+                                        <img src="img/vectores/icono-dropdown.svg" alt="" class="dropdown-icono">
+                                        Cementerio de la Recoleta
+                                    </a>
+                                </li>
+                                <li><span class="dropdown-link"><img src="img/vectores/icono-dropdown.svg" alt=""
+                                            class="dropdown-icono">Floralis Genérica</span></li>
+                                <li><span class="dropdown-link"><img src="img/vectores/icono-dropdown.svg" alt=""
+                                            class="dropdown-icono">Basílica Nuestra Señora del Pilar</span></li>
+                                <li><span class="dropdown-link"><img src="img/vectores/icono-dropdown.svg" alt=""
+                                            class="dropdown-icono">Plaza Francia</span></li>
+                            </ul>
+                        </div>
+
+                        <!-- Columna 3 -->
+                        <div class="dropdown-columna">
+                            <h4 class="dropdown-titulo">Circuitos</h4>
+                            <ul class="dropdown-lista">
+                                <li><span class="dropdown-link"><img src="img/vectores/icono-dropdown.svg" alt=""
+                                            class="dropdown-icono">Murales e Iconografía Urbana</span></li>
+                                <li><span class="dropdown-link"><img src="img/vectores/icono-dropdown.svg" alt=""
+                                            class="dropdown-icono">Paseo de las Esculturas</span></li>
+                                <li><span class="dropdown-link"><img src="img/vectores/icono-dropdown.svg" alt=""
+                                            class="dropdown-icono">Circuitos de Arte Callejero</span></li>
+                                <li><span class="dropdown-link"><img src="img/vectores/icono-dropdown.svg" alt=""
+                                            class="dropdown-icono">Guías de Recorridos</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
                 <a href="gastronomia.html">Gastronomía</a>
             </div>
             <div class="header-idiomas">
@@ -37,7 +97,143 @@
     </header>
 
     <main>
-<!--ACÁ PONGAN TODO EL CONTENIDO DE LA PAGINA AHRE QUE ERA OBVIO, puede que si ponen algo chiquito no se vea pq lo cubre el header--> 
+        <section class="agenda-seccion">
+            <h1 class="agenda-titulo-principal">Agenda</h1>
+
+            <!-- Propuesta I -->
+            <article class="tarjeta-agenda">
+                <div class="agenda-contenido-interno">
+                    <div class="agenda-grupo-fecha">
+                        <span class="agenda-numero">19</span>
+                        <div class="agenda-columna-fecha">
+                            <div class="agenda-contenedor-img">
+                                <img src="img/vectores/baldosa.svg" alt="Baldosa Recoleta" class="agenda-baldosa"
+                                    width="100">
+                                <img src="img/web/agenda/1-feria-francesa.jpg" alt="Feria Francesa" class="agenda-foto"
+                                    width="100">
+                            </div>
+                            <p class="agenda-texto-mes-anio"><span class="agenda-mes">sept</span><span
+                                    class="agenda-barra">/</span><span class="agenda-anio">2026</span></p>
+                        </div>
+                    </div>
+
+                    <div class="agenda-info-evento">
+                        <p class="agenda-subtitulo">Propuesta I</p>
+                        <h2 class="agenda-nombre">Feria Francesa</h2>
+                        <p class="agenda-descripcion">Disfrutá de la mejor gastronomía francesa sin salir de Buenos
+                            Aires, un rincón gourmet perfecto para disfrutar en familia o con amigos.</p>
+                    </div>
+                </div>
+
+                <div class="agenda-franja-violeta">
+                    <div class="agenda-franja-interno">
+                        <p class="agenda-direccion">Plaza Francia - Av. del Libertador 1400</p>
+                        <p class="agenda-categoria">Gastronomía y cultura francesa</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Propuesta II -->
+            <article class="tarjeta-agenda">
+                <div class="agenda-contenido-interno">
+                    <div class="agenda-grupo-fecha">
+                        <span class="agenda-numero">20</span>
+                        <div class="agenda-columna-fecha">
+                            <div class="agenda-contenedor-img">
+                                <img src="img/vectores/baldosa.svg" alt="Baldosa Recoleta" class="agenda-baldosa"
+                                    width="100">
+                                <img src="img/web/agenda/2-mafalda-inmersiva.jpg" alt="Mafalda Inmersiva"
+                                    class="agenda-foto" width="100">
+                            </div>
+                            <p class="agenda-texto-mes-anio"><span class="agenda-mes">sept</span><span
+                                    class="agenda-barra">/</span><span class="agenda-anio">2026</span></p>
+                        </div>
+                    </div>
+
+                    <div class="agenda-info-evento">
+                        <p class="agenda-subtitulo">Propuesta II</p>
+                        <h2 class="agenda-nombre">Mafalda Inmersiva</h2>
+                        <p class="agenda-descripcion">Esta muestra te invita a caminar por los escenarios interactivos
+                            de Quino, revivir sus reflexiones y sumergirte en proyecciones de 360°.</p>
+                    </div>
+                </div>
+
+                <div class="agenda-franja-violeta">
+                    <div class="agenda-franja-interno">
+                        <p class="agenda-direccion">Centro Cultural Recoleta - Junín 1930</p>
+                        <p class="agenda-categoria">Experiencia cultural interactiva</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Propuesta III -->
+            <article class="tarjeta-agenda">
+                <div class="agenda-contenido-interno">
+                    <div class="agenda-grupo-fecha">
+                        <span class="agenda-numero">25</span>
+                        <div class="agenda-columna-fecha">
+                            <div class="agenda-contenedor-img">
+                                <img src="img/vectores/baldosa.svg" alt="Baldosa Recoleta" class="agenda-baldosa"
+                                    width="100">
+                                <img src="img/web/agenda/3-festival-mascotear.png" alt="Festival Mascotear"
+                                    class="agenda-foto" width="100">
+                            </div>
+                            <p class="agenda-texto-mes-anio"><span class="agenda-mes">sept</span><span
+                                    class="agenda-barra">/</span><span class="agenda-anio">2026</span></p>
+                        </div>
+                    </div>
+
+                    <div class="agenda-info-evento">
+                        <p class="agenda-subtitulo">Propuesta III</p>
+                        <h2 class="agenda-nombre">Festival Mascotear</h2>
+                        <p class="agenda-descripcion">El espacio definitivo para los amantes de los animales, vení a
+                            disfrutar de talleres de tenencia responsable, juegos al aire libre, y una jornada especial
+                            de adopción consciente.</p>
+                    </div>
+                </div>
+
+                <div class="agenda-franja-violeta">
+                    <div class="agenda-franja-interno">
+                        <p class="agenda-direccion">Plazas de las Naciones Unidas - Av. Figueroa Alcorta 2263</p>
+                        <p class="agenda-categoria">Actividades y propuestas para mascotas</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Propuesta IV -->
+            <article class="tarjeta-agenda">
+                <div class="agenda-contenido-interno">
+                    <div class="agenda-grupo-fecha">
+                        <span class="agenda-numero">28</span>
+                        <div class="agenda-columna-fecha">
+                            <div class="agenda-contenedor-img">
+                                <img src="img/vectores/baldosa.svg" alt="Baldosa Recoleta" class="agenda-baldosa"
+                                    width="100">
+                                <img src="img/web/agenda/4-feria-natural.jpg" alt="Feria Natural" class="agenda-foto"
+                                    width="100">
+                            </div>
+                            <p class="agenda-texto-mes-anio"><span class="agenda-mes">sept</span><span
+                                    class="agenda-barra">/</span><span class="agenda-anio">2026</span></p>
+                        </div>
+                    </div>
+
+                    <div class="agenda-info-evento">
+                        <p class="agenda-subtitulo">Propuesta IV</p>
+                        <h2 class="agenda-nombre">Feria Natural</h2>
+                        <p class="agenda-descripcion">Encontrá productos orgánicos, cosmética natural y alimentos
+                            agroecológicos directo de sus productores. Además, podrás sumarte a charlas sobre
+                            sustentabilidad y talleres de huerta urbana.</p>
+                    </div>
+                </div>
+
+                <div class="agenda-franja-violeta">
+                    <div class="agenda-franja-interno">
+                        <p class="agenda-direccion">Centro Cultural Recoleta - Junín 1930</p>
+                        <p class="agenda-categoria">Productos naturales y diseño sustentable</p>
+                    </div>
+                </div>
+            </article>
+        </section>
     </main>
 
     <footer>
@@ -82,9 +278,9 @@
             <div class="footer-inferior">
                 <p><span class="destacado-texto">&copy; 2026 Conozca Recoleta.</span> Todos los derechos reservados.</p>
                 <div class="footer-redes">
-                    <a href="#"><img src="IMG/vectores/icono-youtube.svg" alt="YouTube" width="35"></a>
-                    <a href="#"><img src="IMG/vectores/icono-instagram.svg" alt="Instagram" width="35"></a>
-                    <a href="#"><img src="IMG/vectores/icono-facebook.svg" alt="FaceBook" width="35"></a>
+                    <a href="#"><img src="img/vectores/icono-youtube.svg" alt="YouTube" width="35"></a>
+                    <a href="#"><img src="img/vectores/icono-instagram.svg" alt="Instagram" width="35"></a>
+                    <a href="#"><img src="img/vectores/icono-facebook.svg" alt="FaceBook" width="35"></a>
                 </div>
             </div>
         </section>

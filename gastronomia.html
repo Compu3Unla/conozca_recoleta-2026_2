@@ -7,9 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles-conozca-recoleta.css">
     <link rel="icon" type="ico" href="img/favicon-recoleta-lila.ico">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-    </style> <!--ACÁ VAN LAS FONT QUE SACAMOS DE GOOGLE, NO ME ACUERDO CUALES ERAN JIJI-->
 </head>
 
 <body>
@@ -73,15 +70,78 @@
     </symbol>
 
 
-    <header>
+ <header>
         <nav class="header-container">
             <div class="header-logo">
-                <a href="index.html"><img src="/img/vectores/header_logotipo.svg" alt="header-logotipo"
+                <a href="index.html"><img src="img/vectores/header_logotipo.svg" alt="header-logotipo"
                         width="180px"></a>
             </div>
             <div class="header-navegacion">
-                <a href="agenda.html">Agenda</a>
-                <a href="#">Arte & Cultura</a>
+                <a href="agenda.html" class="header-items">Agenda</a>
+
+
+                <div class="header-dropdown">
+                    <a href="#" class="header-dropdown-boton">
+                        Arte &amp; Cultura
+                        <img src="img/vectores/icono-flecha.svg" alt="" width="15px" class="header-dropdown-flecha">
+                    </a>
+
+                    <div class="dropdown-menu">
+                        <!-- Columna 1 -->
+                        <div class="dropdown-columna">
+                            <h4 class="dropdown-titulo">Museos y Espacios</h4>
+                            <ul class="dropdown-lista">
+                                <li>
+                                    <a href="ccr.html" class="dropdown-link">
+                                        <img src="img/vectores/icono-dropdown.svg" alt="" class="dropdown-icono">
+                                        Centro Cultural Recoleta
+                                    </a>
+                                </li>
+                                <li><span class="dropdown-link"><img src="img/vectores/icono-dropdown.svg" alt=""
+                                            class="dropdown-icono">Museo Nacional de Bellas Artes</span></li>
+                                <li><span class="dropdown-link"><img src="img/vectores/icono-dropdown.svg" alt=""
+                                            class="dropdown-icono">Palais de Glace</span></li>
+                                <li><span class="dropdown-link"><img src="img/vectores/icono-dropdown.svg" alt=""
+                                            class="dropdown-icono">Centro Cultural de la Ciencia</span></li>
+                            </ul>
+                        </div>
+
+                        <!-- Columna 2 -->
+                        <div class="dropdown-columna">
+                            <h4 class="dropdown-titulo">Patrimonio</h4>
+                            <ul class="dropdown-lista">
+                                <li>
+                                    <a href="cementerio.html" class="dropdown-link">
+                                        <img src="img/vectores/icono-dropdown.svg" alt="" class="dropdown-icono">
+                                        Cementerio de la Recoleta
+                                    </a>
+                                </li>
+                                <li><span class="dropdown-link"><img src="img/vectores/icono-dropdown.svg" alt=""
+                                            class="dropdown-icono">Floralis Genérica</span></li>
+                                <li><span class="dropdown-link"><img src="img/vectores/icono-dropdown.svg" alt=""
+                                            class="dropdown-icono">Basílica Nuestra Señora del Pilar</span></li>
+                                <li><span class="dropdown-link"><img src="img/vectores/icono-dropdown.svg" alt=""
+                                            class="dropdown-icono">Plaza Francia</span></li>
+                            </ul>
+                        </div>
+
+                        <!-- Columna 3 -->
+                        <div class="dropdown-columna">
+                            <h4 class="dropdown-titulo">Circuitos</h4>
+                            <ul class="dropdown-lista">
+                                <li><span class="dropdown-link"><img src="img/vectores/icono-dropdown.svg" alt=""
+                                            class="dropdown-icono">Murales e Iconografía Urbana</span></li>
+                                <li><span class="dropdown-link"><img src="img/vectores/icono-dropdown.svg" alt=""
+                                            class="dropdown-icono">Paseo de las Esculturas</span></li>
+                                <li><span class="dropdown-link"><img src="img/vectores/icono-dropdown.svg" alt=""
+                                            class="dropdown-icono">Circuitos de Arte Callejero</span></li>
+                                <li><span class="dropdown-link"><img src="img/vectores/icono-dropdown.svg" alt=""
+                                            class="dropdown-icono">Guías de Recorridos</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
                 <a href="gastronomia.html">Gastronomía</a>
             </div>
             <div class="header-idiomas">
@@ -94,7 +154,6 @@
             </div>
         </nav>
     </header>
-
 
     <main class="gastronomia">
 
@@ -589,9 +648,9 @@
             <div class="footer-inferior">
                 <p><span class="destacado-texto">&copy; 2026 Conozca Recoleta.</span> Todos los derechos reservados.</p>
                 <div class="footer-redes">
-                    <a href="#"><img src="IMG/vectores/icono-youtube.svg" alt="YouTube" width="35"></a>
-                    <a href="#"><img src="IMG/vectores/icono-instagram.svg" alt="Instagram" width="35"></a>
-                    <a href="#"><img src="IMG/vectores/icono-facebook.svg" alt="FaceBook" width="35"></a>
+                    <a href="#"><img src="img/vectores/icono-youtube.svg" alt="YouTube" width="35"></a>
+                    <a href="#"><img src="img/vectores/icono-instagram.svg" alt="Instagram" width="35"></a>
+                    <a href="#"><img src="img/vectores/icono-facebook.svg" alt="FaceBook" width="35"></a>
                 </div>
             </div>
         </section>

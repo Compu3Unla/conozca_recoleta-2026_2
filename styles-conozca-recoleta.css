@@ -201,10 +201,18 @@ nav a {
     background-color: var(--crema-recoleta);
 }
 
+.header-navegacion a:hover {
+    font-family: 'Asap-bold';
+    color: var(--lila-recoleta);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px;
+}
+
 .header-navegacion {
     display: flex;
     gap: 70px;
-        font-size: 17px;
+    font-size: 17px;
 }
 
 .header-idiomas {
@@ -230,6 +238,131 @@ nav a {
     font-size: 17px;
     font-family: 'Asap-semibold';
 }
+
+/*DROPDOWN ARTE Y CULTURA*/
+
+.header-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.header-dropdown-boton {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.header-dropdown-flecha {
+    transition: transform 0.25s ease;
+}
+
+.header-dropdown:hover .header-dropdown-boton,
+.header-dropdown:focus-within .header-dropdown-boton {
+    font-family: 'Asap-bold';
+    color: var(--lila-recoleta);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px;
+}
+
+.header-dropdown:hover .header-dropdown-flecha,
+.header-dropdown:focus-within .header-dropdown-flecha {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 38px);
+    left: 0;
+    width: 55vw;
+    max-width: 900px;
+    z-index: 100;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 25px 30px 30px;
+
+    background-color: var(--crema-recoleta);
+    box-shadow: 0 8px 24px var(--violeta-recoleta);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+}
+
+.dropdown-menu::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    height: 40px;
+}
+
+.header-dropdown:hover .dropdown-menu,
+.header-dropdown:focus-within .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-titulo {
+    margin: 0 0 12px;
+    color: var(--lila-recoleta);
+}
+
+.dropdown-lista {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-lista li {
+    border-bottom: 1px solid var(--violeta-recoleta);
+}
+
+.dropdown-lista li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-link {
+    font-family: 'Asap', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 4px;
+    color: var(--violeta-recoleta);
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-icono {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    transition: filter 0.2s ease;
+}
+
+.dropdown-link:hover,
+.dropdown-link:focus-visible {
+    background-color: var(--lila-recoleta);
+    color: var(--crema-recoleta);
+    font-style: italic;
+    outline: none;
+}
+
+.dropdown-link:hover .dropdown-icono,
+.dropdown-link:focus-visible .dropdown-icono {
+    filter: brightness(0) invert(1);
+}
+
+span.dropdown-link {
+    cursor: default;
+}
+
 
 /*INDEX*/
 
@@ -307,6 +440,7 @@ nav a {
     0% {
         transform: translateX(0);
     }
+
     100% {
         transform: translateX(-50%);
     }
@@ -315,160 +449,141 @@ nav a {
 
 /* Sección noticias */
 .ultimas-noticias {
-  background-color: var(--verde-recoleta);
-  padding: 40px 20px;
-  font-family: 'Inter', sans-serif;
+    background-color: var(--verde-recoleta);
+    padding: 40px 20px;
+    font-family: 'Inter', sans-serif;
 }
- 
+
 .ultimas-noticias h1 {
-  color: var(--violeta-recoleta);
-  margin-bottom: 25px;
-  border-bottom: 2px solid var(--violeta-recoleta);
-  padding-bottom: 10px;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+    color: var(--violeta-recoleta);
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--violeta-recoleta);
+    padding-bottom: 10px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
- 
+
 .carrusel-contenedor {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  max-width: 1240px;
-  margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 1240px;
+    margin: 0 auto;
 }
- 
+
 .tarjetas-track {
-  display: flex;
-  gap: 35px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
-  padding: 30px;
-  scroll-padding-inline: 30px;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 1150px;
-  scrollbar-width: none;
+    display: flex;
+    gap: 35px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding: 30px;
+    scroll-padding-inline: 30px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1150px;
+    scrollbar-width: none;
 }
- 
+
 .tarjetas-track::-webkit-scrollbar {
-  display: none;
-}
- 
-.tarjeta-noticia {
-  background-color: var(--crema-recoleta);
-  border-radius: 16px;
-  box-shadow: 0 4px 20px color-mix(in srgb, var(--violeta-recoleta) 25%, transparent);
-  min-width: 340px;
-  max-width: 340px;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 20px;
-  scroll-snap-align: start;
-  box-sizing: border-box;
-}
- 
-.tarjeta-noticia img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
- 
-.tarjeta-noticia .fecha {
-  font-size: 0.85rem;
-  color: var(--violeta-recoleta);
-  margin-bottom: 8px;
-  display: block;
-}
- 
-.tarjeta-noticia h3 {
-  font-size: 1.2rem;
-  color: var(--violeta-recoleta);
-  margin-bottom: 10px;
-  line-height: 1.4;
-}
- 
-.tarjeta-noticia p {
-  color: var(--violeta-recoleta);
-  margin-bottom: 20px;
-  line-height: 1.5;
-  flex-grow: 1;
-}
- 
-.botones-tarjeta {
-  display: flex;
-  gap: 10px;
-}
- 
-.botones-tarjeta button {
-  flex: 1;
-  padding: 10px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  cursor: pointer;
-  font-weight: 500;
-}
- 
-.botones-tarjeta button:first-child {
-  background-color: transparent;
-  border: 1px solid var(--violeta-recoleta);
-  color: var(--violeta-recoleta);
-}
- 
-.botones-tarjeta button:last-child {
-  background-color: var(--violeta-recoleta);
-  border: 1px solid var(--violeta-recoleta);
-  color: var(--crema-recoleta);
-}
- 
-.flecha {
-  background-color: var(--violeta-recoleta);
-  color: var(--crema-recoleta);
-  border: none;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  font-size: 1.2rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
-  flex-shrink: 0;
-  margin: 0;
-  transition: transform 0.2s ease, background-color 0.2s ease;
-}
- 
-.flecha:hover {
-  background-color: var(--violeta-recoleta);
-  transform: scale(1.05);
-}
- 
-@media (max-width: 768px) {
-  .carrusel-contenedor {
-    padding: 0 10px;
-  }
- 
-  .flecha {
     display: none;
-  }
- 
-  .tarjetas-track {
-    padding: 20px;
-    scroll-padding-inline: 20px;
-  }
- 
-  .tarjeta-noticia {
-    min-width: 280px;
-    max-width: 280px;
-  }
 }
+
+.tarjeta-noticia {
+    background-color: var(--crema-recoleta);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px color-mix(in srgb, var(--violeta-recoleta) 25%, transparent);
+    min-width: 340px;
+    max-width: 340px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    scroll-snap-align: start;
+    box-sizing: border-box;
+}
+
+.tarjeta-noticia img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.tarjeta-noticia .fecha {
+    font-size: 0.85rem;
+    color: var(--violeta-recoleta);
+    margin-bottom: 8px;
+    display: block;
+}
+
+.tarjeta-noticia h3 {
+    font-size: 1.2rem;
+    color: var(--violeta-recoleta);
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.tarjeta-noticia p {
+    color: var(--violeta-recoleta);
+    margin-bottom: 20px;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.botones-tarjeta {
+    display: flex;
+    gap: 10px;
+}
+
+.botones-tarjeta button {
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.botones-tarjeta button:first-child {
+    background-color: transparent;
+    border: 1px solid var(--violeta-recoleta);
+    color: var(--violeta-recoleta);
+}
+
+.botones-tarjeta button:last-child {
+    background-color: var(--violeta-recoleta);
+    border: 1px solid var(--violeta-recoleta);
+    color: var(--crema-recoleta);
+}
+
+.flecha {
+    background-color: var(--violeta-recoleta);
+    color: var(--crema-recoleta);
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    flex-shrink: 0;
+    margin: 0;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.flecha:hover {
+    background-color: var(--violeta-recoleta);
+    transform: scale(1.05);
+}
+
 /*AGENDA*/
 
 
@@ -740,62 +855,349 @@ nav a {
 }
 
 
-/* RESPONSIVE */
-
-@media (max-width: 1500px) {
-    .gastronomia {
-        padding: 90px 8% 140px;
-    }
-
-    .gastronomia .tarjetas {
-        column-gap: 40px;
-    }
-}
-
-@media (max-width: 900px) {
-    .gastronomia {
-        padding: 70px 6% 100px;
-        gap: 80px;
-    }
-
-    .gastronomia .tarjetas {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 50px 30px;
-    }
-
-    .gastronomia .categoria h2 {
-        font-size: 48px;
-    }
-}
-
-@media (max-width: 600px) {
-    .gastronomia {
-        padding: 50px 24px 80px;
-        gap: 65px;
-    }
-
-    .gastronomia .tarjetas {
-        grid-template-columns: 1fr;
-        gap: 45px;
-    }
-
-    .gastronomia .categoria {
-        gap: 30px;
-    }
-
-    .gastronomia .categoria h2 {
-        font-size: 38px;
-    }
-
-    .gastronomia .tarjeta-info {
-        min-height: 95px;
-    }
-}
-
 
 
 
 /*CEMENTERIO*/
+
+
+.cementerio-hero nav {
+    font-family: 'Asap', sans-serif;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.cementerio-hero nav a {
+    text-decoration: none;
+    color: var(--crema-recoleta);
+}
+
+.cementerio-hero nav a:after {
+    content: " >";
+    margin: 0 8px;
+    color: var(--violeta-recoleta);
+}
+
+.cementerio-hero nav a:first-child {
+    font-weight: 700;
+}
+
+.cementerio-hero {
+    margin-top: 80px;
+    padding: 40px 60px;
+    background-color: var(--lila-recoleta);
+    color: var(--crema-recoleta);
+    padding: 120px 100px 80px 100px;
+    width: 100%;
+}
+
+.bloque-lectura-cementerio {
+    max-width: 35rem;
+}
+
+.cementerio-presentacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+}
+
+.cementerio-presentacion-bloque h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: normal;
+    margin: 0 0 10px 0;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--crema-recoleta);
+    display: inline-block;
+}
+
+.cementerio-presentacion-bloque h4 {
+    font-weight: 400;
+    color: var(--crema-recoleta);
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.bloque-lectura-cementerio {
+    font-family: 'Asap', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.6;
+    color: var(--crema-recoleta);
+}
+
+
+.cementerio-presentacion-img img {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    display: block;
+    border-radius: 30px;
+    box-shadow: 7.525px 12.542px 9.197px 2.508px rgba(0, 0, 0, 0.25);
+}
+
+.cementerio-mapa-seccion {
+    background-color: var(--verde-recoleta);
+    padding: 80px 100px;
+    margin-top: 0;
+    width: 100%;
+}
+
+.cementerio-mapa-seccion h2 {
+    color: var(--violeta-recoleta);
+    margin-bottom: 50px;
+    font-size: 40px;
+}
+
+.cementerio-mapa-grid {
+    display: flex;
+    gap: 70px;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.cementerio-plano {
+    background: transparent;
+    flex: 1;
+    padding: 30px;
+    box-shadow: none;
+}
+
+.cementerio-plano img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.cementerio-puntos {
+    flex: 1.2;
+}
+
+
+.cementerio-lista-columnas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    font-size: 15px;
+    color: var(--violeta-recoleta);
+}
+
+.cementerio-lista-columnas ol {
+    padding-left: 20px;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.cementerio-lista-columnas ol li::marker {
+    font-family: 'ITC Quorum Black', 'Quorum Black', sans-serif;
+    font-weight: bold;
+    color: var(--lila-recoleta);
+}
+
+.cementerio-panoramica-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.cementerio-video-wrap {
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+}
+
+.cementerio-video-wrap video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.cementerio-tarjeton-hover {
+    position: relative;
+    width: 100%;
+    background-color: var(--lila-recoleta);
+    padding: 7rem;
+    box-sizing: border-box;
+    height: 140px;
+    overflow: hidden;
+}
+
+.cementerio-tarjeton-texto,
+.cementerio-tarjeton-info-extra {
+    position: absolute;
+    left: 80px;
+    right: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+}
+
+.cementerio-tarjeton-texto {
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20rem;
+}
+
+.cementerio-tarjeton-texto .copete {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--crema-recoleta);
+    margin: 0;
+    white-space: nowrap;
+}
+
+.cementerio-tarjeton-texto .bloque-texto {
+    font-family: 'Asap', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+    color: var(--crema-recoleta);
+    margin: 0;
+    max-width: 750px;
+}
+
+.cementerio-tarjeton-info-extra {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20rem;
+}
+
+.cementerio-horario,
+.cementerio-ingreso {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+}
+
+.cementerio-tarjeton-info-extra h4 {
+    font-family: 'Asap', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--verde-recoleta);
+    margin: 0;
+}
+
+.cementerio-tarjeton-info-extra p {
+    font-family: 'Asap', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.4;
+    color: var(--crema-recoleta);
+    margin: 0;
+}
+
+.cementerio-tarjeton-hover:hover .cementerio-tarjeton-texto {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.cementerio-tarjeton-hover:hover .cementerio-tarjeton-info-extra {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cementerio-carrusel-seccion {
+    padding: 100px 90px;
+    background-color: var(--crema-recoleta);
+    width: 100%;
+}
+
+.cementerio-carrusel-contenido-principal {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 70px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cementerio-carrusel-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.tarjetas-track-cementerio {
+    width: 392px;
+    height: 543px;
+    border-radius: 28px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 7.525px 12.542px 9.197px 2.508px rgba(0, 0, 0, 0.25);
+}
+
+.tarjeta-imagen-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.tarjeta-imagen-wrap:first-child {
+    display: block;
+}
+
+.tarjeta-imagen-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.tarjeta-info-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 580px;
+}
+
+.tarjeta-info-wrap h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    color: var(--violeta-recoleta);
+    margin: 0 0 15px 0;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--violeta-recoleta);
+    width: 100%;
+}
+
+.tarjeta-info-wrap .bloque-lectura {
+    font-family: 'Asap', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--violeta-recoleta);
+    margin: 0 0 25px 0;
+}
+
+.enlace-mas-info {
+    font-family: 'Asap-semibold', sans-serif;
+    color: var(--violeta-recoleta);
+    text-decoration: underline;
+    font-size: 15px;
+    width: fit-content;
+    transition: opacity 0.2s ease;
+}
+
+.enlace-mas-info:hover {
+    opacity: 0.7;
+}
+
+
 
 
 
@@ -940,7 +1342,13 @@ hr {
     display: block;
 }
 
-/*////////////////MOBILE//////////////////////*/
+
+
+
+
+
+
+/*////////////////MOBILE RESPONSIVE//////////////////////*/
 @media (max-width: 768px) {
     body {
         background-color: var(--crema-recoleta);
@@ -962,9 +1370,25 @@ hr {
 
 
 /*INDEX*/
+@media (max-width: 768px) {
+    .carrusel-contenedor {
+        padding: 0 10px;
+    }
 
+    .flecha {
+        display: none;
+    }
 
+    .tarjetas-track {
+        padding: 20px;
+        scroll-padding-inline: 20px;
+    }
 
+    .tarjeta-noticia {
+        min-width: 280px;
+        max-width: 280px;
+    }
+}
 
 
 
@@ -976,13 +1400,220 @@ hr {
 
 /*GASTRONOMIA*/
 
+@media (max-width: 1500px) {
+    .gastronomia {
+        padding: 90px 8% 140px;
+    }
+
+    .gastronomia .tarjetas {
+        column-gap: 40px;
+    }
+}
+
+@media (max-width: 900px) {
+    .gastronomia {
+        padding: 70px 6% 100px;
+        gap: 80px;
+    }
+
+    .gastronomia .tarjetas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 50px 30px;
+    }
+
+    .gastronomia .categoria h2 {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 600px) {
+    .gastronomia {
+        padding: 50px 24px 80px;
+        gap: 65px;
+    }
+
+    .gastronomia .tarjetas {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .gastronomia .categoria {
+        gap: 30px;
+    }
+
+    .gastronomia .categoria h2 {
+        font-size: 38px;
+    }
+
+    .gastronomia .tarjeta-info {
+        min-height: 95px;
+    }
+}
+
+
+
+
 
 
 
 /*CEMENTERIO*/
 
 
+@media (max-width: 768px) {
 
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .cementerio-hero {
+        width: 100vw;
+        padding: 90px 28px 60px 28px;
+        margin-top: 60px;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+        box-sizing: border-box;
+    }
+
+    .cementerio-presentacion {
+        flex-direction: column;
+        gap: 40px;
+        width: 100%;
+    }
+
+    .cementerio-presentacion-bloque,
+    .cementerio-presentacion-img {
+        width: 100%;
+        flex: unset;
+    }
+
+    .cementerio-presentacion-bloque h1 {
+        font-size: 34px;
+        width: 100%;
+    }
+
+    .cementerio-presentacion-img img {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 20px;
+    }
+
+    .cementerio-mapa-seccion {
+        width: 100vw;
+        padding: 70px 28px;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+        box-sizing: border-box;
+    }
+
+    .cementerio-mapa-grid {
+        flex-direction: column;
+        gap: 30px;
+        width: 100%;
+    }
+
+    .cementerio-plano,
+    .cementerio-puntos {
+        width: 100%;
+        padding: 0;
+    }
+
+    .cementerio-lista-columnas {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px 12px;
+        font-size: 13px;
+    }
+
+    .cementerio-panoramica-container {
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+    }
+
+    .cementerio-video-wrap {
+        width: 100%;
+        height: 260px;
+    }
+
+    .cementerio-tarjeton-hover {
+        width: 100%;
+        height: auto;
+        padding: 24px 28px;
+        box-sizing: border-box;
+    }
+
+    .cementerio-tarjeton-texto,
+    .cementerio-tarjeton-info-extra {
+        position: relative;
+        left: unset;
+        right: unset;
+        top: unset;
+        transform: none;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .cementerio-tarjeton-info-extra {
+        display: none;
+    }
+
+    .cementerio-carrusel-seccion {
+        width: 100vw;
+        padding: 70px 28px;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+        box-sizing: border-box;
+    }
+
+    .cementerio-carrusel-contenido-principal {
+        flex-direction: column-reverse;
+        gap: 35px;
+        width: 100%;
+    }
+
+    .tarjeta-info-wrap {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .tarjeta-info-wrap h2 {
+        font-size: 28px;
+        width: 100%;
+    }
+
+    .tarjetas-track-cementerio {
+        width: 100%;
+        height: 440px;
+        border-radius: 20px;
+        display: flex;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .tarjetas-track-cementerio::-webkit-scrollbar {
+        display: none;
+    }
+
+    .tarjeta-imagen-wrap {
+        position: relative;
+        display: block !important;
+        flex: 0 0 100%;
+        width: 100%;
+        height: 100%;
+        scroll-snap-align: center;
+    }
+
+    .tarjeta-imagen-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+}
 
 /*CENTRO CULRTURAL*/
 
