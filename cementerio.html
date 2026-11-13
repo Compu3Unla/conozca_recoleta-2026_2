@@ -10,12 +10,13 @@
 </head>
 
 <body>
- <header>
+    <header>
         <nav class="header-container">
             <div class="header-logo">
                 <a href="index.html"><img src="img/vectores/header_logotipo.svg" alt="header-logotipo"
                         width="180px"></a>
             </div>
+
             <div class="header-navegacion">
                 <a href="agenda.html" class="header-items">Agenda</a>
 
@@ -82,12 +83,44 @@
                     </div>
                 </div>
 
-                <a href="gastronomia.html">Gastronomía</a>
+                <a href="gastronomia.html" class="header-items">Gastronomía</a>
             </div>
-            <div class="header-idiomas">
-                <div>
-                    <img src="img/vectores/icono-idiomas.svg" alt="header-idioma" width="30px">
-                    <img src="img/vectores/icono-flecha.svg" alt="header-flecha" width="15px">
+
+            <div class="header-columna-derecha">
+                <div class="header-dropdown">
+                    <a href="#" class="header-dropdown-boton">
+                        <img src="img/vectores/icono-idiomas.svg" alt="Idiomas" width="30px">
+                        <img src="img/vectores/icono-flecha.svg" alt="" width="15px" class="header-dropdown-flecha">
+                    </a>
+
+                    <div class="dropdown-menu dropdown-idiomas">
+                        <!-- Columna 1 -->
+                        <ul class="dropdown-lista">
+                            <li><a href="#" class="dropdown-link"><img src="img/vectores/icono-argentina.svg" alt=""
+                                        class="dropdown-bandera" width="30px">Español</a></li>
+                            <li><a href="#" class="dropdown-link"><img src="img/vectores/icono-inglaterra.svg" alt=""
+                                        class="dropdown-bandera" width="30px">English</a></li>
+                            <li><a href="#" class="dropdown-link"><img src="img/vectores/icono-brasil.svg" alt=""
+                                        class="dropdown-bandera" width="30px">Português</a></li>
+                            <li><a href="#" class="dropdown-link"><img src="img/vectores/icono-francia.svg" alt=""
+                                        class="dropdown-bandera" width="30px">Français</a></li>
+                            <li><a href="#" class="dropdown-link"><img src="img/vectores/icono-alemania.svg" alt=""
+                                        class="dropdown-bandera" width="30px">Deutsch</a></li>
+                        </ul>
+                        <!-- Columna 2 -->
+                        <ul class="dropdown-lista">
+                            <li><a href="#" class="dropdown-link"><img src="img/vectores/icono-italia.svg" alt=""
+                                        class="dropdown-bandera" width="30px">Italiano</a></li>
+                            <li><a href="#" class="dropdown-link"><img src="img/vectores/icono-japon.svg" alt=""
+                                        class="dropdown-bandera" width="30px">日本語</a></li>
+                            <li><a href="#" class="dropdown-link"><img src="img/vectores/icono-china.svg" alt=""
+                                        class="dropdown-bandera" width="30px">中文</a></li>
+                            <li><a href="#" class="dropdown-link"><img src="img/vectores/icono-corea.svg" alt=""
+                                        class="dropdown-bandera" width="30px">한국어</a></li>
+                            <li><a href="#" class="dropdown-link"><img src="img/vectores/icono-rusia.svg" alt=""
+                                        class="dropdown-bandera" width="30px">Русский</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <input type="text" class="input-buscar" placeholder="🔍︎​ Buscar...">
                 <a href="#" class="header-contacto">Contacto</a>
@@ -265,7 +298,8 @@
             <div class="footer-superior">
                 <div class="footer-izquierda">
                     <h2>Conozca Recoleta</h2>
-                    <p>/ 1.997.523 visitas totales · 124 explorando ahora /</p>
+                    <p>/ <span class="destacado-footer">1.997.523</span> visitas totales · <span id="usuarios-activos"
+                            class="destacado-footer">124</span> explorando ahora /</p>
                 </div>
 
                 <div class="footer-derecha">
@@ -336,5 +370,22 @@
                 mostrarImagen(indiceActual);
             });
         });
+    </script>
+
+    <!-- SCRIPT FOOTER: CONTADOR DE VISITAS (simulado) -->
+    <script>
+        setInterval(() => {
+            const spanActivos = document.getElementById('usuarios-activos');
+            if (!spanActivos) return;
+
+            let actual = parseInt(spanActivos.innerText);
+            let variacion = Math.floor(Math.random() * 3) - 1;
+            let nuevoValor = actual + variacion;
+
+            if (nuevoValor < 115) nuevoValor = 115;
+            if (nuevoValor > 135) nuevoValor = 135;
+
+            spanActivos.innerText = nuevoValor;
+        }, 3000);
     </script>
 </body>
