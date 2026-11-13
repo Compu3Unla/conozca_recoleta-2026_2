@@ -365,7 +365,7 @@ span.dropdown-link {
 
 /* ========================================== */
 
-/*DROPDOWN CPNTACTO*/
+/*DROPDOWN CONTACTO*/
 
 .contacto-details {
     position: relative;
@@ -386,9 +386,9 @@ span.dropdown-link {
     top: calc(100% + 22px);
     right: 0;
     width: 310px;
-    background-color: #f4f2f0;
+    background-color: var(--crema-recoleta);
     padding: 28px 25px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 10px 25px var(--violeta-recoleta);
     z-index: 1000;
     text-align: left;
     box-sizing: border-box;
@@ -2036,21 +2036,22 @@ body {
 }
 
 .ccr-galeria {
-    padding: 100px 160px;
+    padding: 100px 80px;
     background-color: var(--crema-recoleta);
     width: 100%;
     box-sizing: border-box;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 110px;
+    justify-content: space-between;
+    gap: 50px;
 }
 
 .ccr-galeria-text {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    max-width: 580px;
+    flex: 1;
+    max-width: 750px;
     position: relative;
     top: -20px;
 }
@@ -2080,7 +2081,7 @@ body {
 .ccr-galeria-carrucel {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     position: relative;
     flex-shrink: 0;
 }
