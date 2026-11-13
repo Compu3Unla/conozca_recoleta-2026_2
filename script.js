@@ -77,14 +77,33 @@ const monogramaRecoleta = `
 `;
 
 
-/* INSERTAR MONOGRAMA EN TODAS LAS FOTOGRAFÍAS */
+/* ========================================== */
+/* MONOGRAMA Y HOVER - GALERÍA GASTRONÓMICA   */
+/* ========================================== */
+
+/*
+Este script recorre todas las fotografías de
+la sección Gastronomía.
+
+En cada fotografía:
+1. Crea un contenedor si todavía no existe.
+2. Incorpora el monograma de Recoleta.
+3. Agrega una leyenda informativa para el hover.
+
+La fotografía original permanece visible.
+La aparición del hover se controla desde CSS.
+*/
 
 document.querySelectorAll(".gastronomia .foto-local").forEach(imagen => {
 
-    // Evitar duplicar contenedores
+    /* CONTENEDOR DE LA FOTOGRAFÍA */
+
+    // Buscar si la imagen ya tiene un contenedor
     let contenedor = imagen.closest(".contenedor-foto");
 
+    // Crear el contenedor solamente si no existe
     if (!contenedor) {
+
         contenedor = document.createElement("div");
         contenedor.classList.add("contenedor-foto");
 
@@ -92,15 +111,35 @@ document.querySelectorAll(".gastronomia .foto-local").forEach(imagen => {
         contenedor.appendChild(imagen);
     }
 
-    // Insertar monograma una sola vez por fotografía
+
+    /* MONOGRAMA RECOLETA */
+
+    // Incorporar el monograma una sola vez
     if (!contenedor.querySelector(".monograma")) {
 
         const marca = document.createElement("div");
-        marca.classList.add("monograma");
 
+        marca.classList.add("monograma");
         marca.innerHTML = monogramaRecoleta;
 
         contenedor.appendChild(marca);
+    }
+
+
+    /* HOVER INFORMATIVO */
+
+    // Obtener la leyenda definida en el HTML
+    const textoHover = imagen.dataset.hover;
+
+    // Crear la leyenda si existe el atributo data-hover
+    if (textoHover && !contenedor.querySelector(".texto-hover")) {
+
+        const leyenda = document.createElement("div");
+
+        leyenda.classList.add("texto-hover");
+        leyenda.textContent = textoHover;
+
+        contenedor.appendChild(leyenda);
     }
 
 });
