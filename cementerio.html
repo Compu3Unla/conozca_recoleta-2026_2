@@ -123,7 +123,39 @@
                     </div>
                 </div>
                 <input type="text" class="input-buscar" placeholder="🔍︎​ Buscar...">
-                <a href="#" class="header-contacto">Contacto</a>
+                
+                <div class="contacto-dropdown-wrap">
+                    <details class="contacto-details">
+                        <summary class="header-contacto">Contacto</summary>
+                        <div class="contacto-modal">
+                            <input type="checkbox" id="estado-enviado" class="toggle-enviado">
+                            <form class="form-vivi-recoleta" action="#enviado">
+                                <h3>Viví Recoleta</h3>
+                                <p class="contacto-subtitulo">Escribinos para recibir información sobre novedades y
+                                    recorridos.</p>
+
+                                <label for="contacto-nombre">Nombre</label>
+                                <input type="text" id="contacto-nombre" placeholder="Ingres." required>
+
+                                <label for="contacto-email">Email</label>
+                                <input type="email" id="contacto-email" placeholder="Ingres." required>
+
+                                <label class="contacto-check">
+                                    <input type="checkbox" required>
+                                    <span>Acepto recibir información sobre novedades y recorridos</span>
+                                </label>
+
+                                <label for="estado-enviado" class="btn-enviar-contacto">Enviar</label>
+                            </form>
+
+                            <div class="contacto-exito">
+                                <p><strong>¡Suscripción confirmada!</strong><br>Gracias por sumarte a Viví Recoleta.</p>
+                                <label for="estado-enviado" class="btn-volver-contacto">Volver</label>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+                
             </div>
         </nav>
     </header>
