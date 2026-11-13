@@ -1005,10 +1005,23 @@ span.dropdown-link {
     margin-bottom: 50px;
     transition: background-color 0.2s ease;
     padding-bottom: 25px;
+    position: relative;
 }
 
-.tarjeta-agenda:hover {
+.tarjeta-agenda:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
     background-color: var(--verde-recoleta);
+    z-index: -1;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 .agenda-contenido-interno {
@@ -1147,10 +1160,10 @@ span.dropdown-link {
 .agenda-franja-interno {
     max-width: 1050px;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 460px; 
     align-items: center;
-    padding: 12px 40px;
+    padding: 12px 40px; 
     box-sizing: border-box;
 }
 
@@ -1160,6 +1173,7 @@ span.dropdown-link {
     font-size: 14px;
     color: var(--crema-recoleta);
     margin: 0;
+    text-align: left;
 }
 
 .agenda-categoria {
@@ -1167,7 +1181,8 @@ span.dropdown-link {
     font-weight: 500;
     font-size: 14px;
     color: var(--crema-recoleta);
-    margin-right: 100px;
+    margin-right: 0px;
+    text-align: left;
 }
 
 
@@ -2186,6 +2201,8 @@ hr {
 
 /*////////////////MOBILE RESPONSIVE//////////////////////*/
 @media (max-width: 768px) {
+
+    /* ---BODY --- */
     body {
         background-color: var(--crema-recoleta);
         margin: 0;
@@ -2194,19 +2211,60 @@ hr {
         overflow-x: hidden;
         box-sizing: border-box;
     }
-}
 
 
-/*HEADER*/
+    /* --- HEADER --- */
+    .header-container {
+        padding: 12px 20px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 
+    .header-navegacion {
+        gap: 20px;
+        font-size: 15px;
+        flex-wrap: wrap;
+    }
 
+    .header-columna-derecha {
+        gap: 10px;
+    }
 
+    .input-buscar {
+        padding: 8px 10px;
+        font-size: 14px;
+        width: 120px;
+    }
 
+    .header-contacto {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
 
+    .dropdown-menu {
+        width: 85vw;
+        max-width: 320px;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
+        left: 50%;
+        transform: translateX(-50%) translateY(-10px);
+    }
 
+    .header-dropdown:hover .dropdown-menu,
+    .header-dropdown:focus-within .dropdown-menu {
+        transform: translateX(-50%) translateY(0);
+    }
 
-/*INDEX*/
-@media (max-width: 768px) {
+    .contacto-modal {
+        width: 280px;
+        right: -40px;
+        padding: 20px 18px;
+    }
+    
+/* MEDIA QUERIES GENERALES (max-width: 768px) */
+
+    /* --- INDEX --- */
     .carrusel-contenedor {
         padding: 0 10px;
     }
@@ -2224,75 +2282,70 @@ hr {
         min-width: 280px;
         max-width: 280px;
     }
-}
 
 
-
-/*AGENDA*/
-
-
-
-
-
-/*GASTRONOMIA*/
-
-@media (max-width: 1500px) {
-    .gastronomia {
-        padding: 90px 8% 140px;
+    /* --- AGENDA --- */
+    .agenda-seccion {
+        padding-left: 24px;
+        padding-right: 24px;
+        margin-top: 80px;
+        padding-bottom: 50px;
     }
 
-    .gastronomia .tarjetas {
-        column-gap: 40px;
-    }
-}
-
-@media (max-width: 900px) {
-    .gastronomia {
-        padding: 70px 6% 100px;
-        gap: 80px;
+    .agenda-titulo-principal {
+        font-size: 28px;
     }
 
-    .gastronomia .tarjetas {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 50px 30px;
+    .agenda-contenido-interno {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 0;
     }
 
-    .gastronomia .categoria h2 {
-        font-size: 48px;
-    }
-}
-
-@media (max-width: 600px) {
-    .gastronomia {
-        padding: 50px 24px 80px;
-        gap: 65px;
+    .agenda-grupo-fecha {
+        gap: 15px;
     }
 
-    .gastronomia .tarjetas {
+    .agenda-numero {
+        font-size: 110px;
+    }
+
+    .agenda-mes {
+        font-size: 28px;
+    }
+
+    .agenda-barra, 
+    .agenda-anio {
+        font-size: 22px;
+    }
+
+    .agenda-info-evento {
+        margin-left: 0; 
+        margin-top: 15px;
+        max-width: 100%;
+    }
+
+    .agenda-nombre {
+        font-size: 24px;
+    }
+
+    .agenda-descripcion {
+        max-width: 100%;
+        margin: 20px 0 0 0;
+    }
+
+    .agenda-franja-interno {
         grid-template-columns: 1fr;
-        gap: 45px;
+        gap: 8px;
+        padding: 12px 20px;
     }
 
-    .gastronomia .categoria {
-        gap: 30px;
+    .agenda-categoria {
+        text-align: left;
     }
 
-    .gastronomia .categoria h2 {
-        font-size: 38px;
-    }
 
-    .gastronomia .tarjeta-info {
-        min-height: 95px;
-    }
-}
-
-
-
-/*CEMENTERIO*/
-
-
-@media (max-width: 768px) {
-
+    /* --- CEMENTERIO --- */
     body {
         width: 100%;
         overflow-x: hidden;
@@ -2445,12 +2498,9 @@ hr {
         object-fit: cover;
         border-radius: 20px;
     }
-}
 
-/*CENTRO CULRTURAL*/
 
-@media (max-width: 768px) {
-
+    /* --- CENTRO CULTURAL --- */
     .ccr-hero {
         width: 100%;
         padding: 80px 28px 50px;
@@ -2574,8 +2624,89 @@ hr {
     .ccr-galeria-flecha {
         display: none;
     }
-
 }
 
 
+/* ========================================== */
+/* MEDIA QUERIES PARA PANTALLAS MEDIANAS (Gastronomía) */
+/* ========================================== */
+
+@media (max-width: 1500px) {
+    .gastronomia {
+        padding: 90px 8% 140px;
+    }
+
+    .gastronomia .tarjetas {
+        column-gap: 40px;
+    }
+}
+
+@media (max-width: 900px) {
+    .gastronomia {
+        padding: 70px 6% 100px;
+        gap: 80px;
+    }
+
+    .gastronomia .tarjetas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 50px 30px;
+    }
+
+    .gastronomia .categoria h2 {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 600px) {
+    .gastronomia {
+        padding: 50px 24px 80px;
+        gap: 65px;
+    }
+
+    .gastronomia .tarjetas {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .gastronomia .categoria {
+        gap: 30px;
+    }
+
+    .gastronomia .categoria h2 {
+        font-size: 38px;
+    }
+
+    .gastronomia .tarjeta-info {
+        min-height: 95px;
+    }
+}
+
 /*FOOTER*/
+@media (max-width: 768px) {
+    .footer-section {
+        padding: 25px 20px; 
+    }
+
+    .footer-superior {
+        flex-direction: column; 
+        gap: 30px;
+        margin-bottom: 25px;
+    }
+
+    .footer-derecha {
+        flex-direction: column; 
+        gap: 25px;
+        width: 100%;
+    }
+
+    .footer-inferior {
+        flex-direction: column; 
+        gap: 20px;
+        align-items: flex-start;
+        margin-bottom: 25px;
+    }
+
+    .footer-guarda {
+        height: 40px; 
+    }
+}
