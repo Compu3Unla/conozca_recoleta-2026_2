@@ -17,6 +17,7 @@
                 <a href="index.html"><img src="img/vectores/header_logotipo.svg" alt="header-logotipo"
                         width="180px"></a>
             </div>
+
             <div class="header-navegacion">
                 <a href="agenda.html" class="header-items">Agenda</a>
 
@@ -83,12 +84,44 @@
                     </div>
                 </div>
 
-                <a href="gastronomia.html">Gastronomía</a>
+                <a href="gastronomia.html" class="header-items">Gastronomía</a>
             </div>
-            <div class="header-idiomas">
-                <div>
-                    <img src="img/vectores/icono-idiomas.svg" alt="header-idioma" width="30px">
-                    <img src="img/vectores/icono-flecha.svg" alt="header-flecha" width="15px">
+
+            <div class="header-columna-derecha">
+                <div class="header-dropdown">
+                    <a href="#" class="header-dropdown-boton">
+                        <img src="img/vectores/icono-idiomas.svg" alt="Idiomas" width="30px">
+                        <img src="img/vectores/icono-flecha.svg" alt="" width="15px" class="header-dropdown-flecha">
+                    </a>
+
+                    <div class="dropdown-menu dropdown-idiomas">
+                        <!-- Columna 1 -->
+                        <ul class="dropdown-lista">
+                            <li><a href="#" class="dropdown-link"><img src="img/vectores/icono-argentina.svg" alt=""
+                                        class="dropdown-bandera" width="30px">Español</a></li>
+                            <li><a href="#" class="dropdown-link"><img src="img/vectores/icono-inglaterra.svg" alt=""
+                                        class="dropdown-bandera" width="30px">English</a></li>
+                            <li><a href="#" class="dropdown-link"><img src="img/vectores/icono-brasil.svg" alt=""
+                                        class="dropdown-bandera" width="30px">Português</a></li>
+                            <li><a href="#" class="dropdown-link"><img src="img/vectores/icono-francia.svg" alt=""
+                                        class="dropdown-bandera" width="30px">Français</a></li>
+                            <li><a href="#" class="dropdown-link"><img src="img/vectores/icono-alemania.svg" alt=""
+                                        class="dropdown-bandera" width="30px">Deutsch</a></li>
+                        </ul>
+                        <!-- Columna 2 -->
+                        <ul class="dropdown-lista">
+                            <li><a href="#" class="dropdown-link"><img src="img/vectores/icono-italia.svg" alt=""
+                                        class="dropdown-bandera" width="30px">Italiano</a></li>
+                            <li><a href="#" class="dropdown-link"><img src="img/vectores/icono-japon.svg" alt=""
+                                        class="dropdown-bandera" width="30px">日本語</a></li>
+                            <li><a href="#" class="dropdown-link"><img src="img/vectores/icono-china.svg" alt=""
+                                        class="dropdown-bandera" width="30px">中文</a></li>
+                            <li><a href="#" class="dropdown-link"><img src="img/vectores/icono-corea.svg" alt=""
+                                        class="dropdown-bandera" width="30px">한국어</a></li>
+                            <li><a href="#" class="dropdown-link"><img src="img/vectores/icono-rusia.svg" alt=""
+                                        class="dropdown-bandera" width="30px">Русский</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <input type="text" class="input-buscar" placeholder="🔍︎​ Buscar...">
                 <a href="#" class="header-contacto">Contacto</a>
@@ -97,6 +130,69 @@
     </header>
 
     <main>
+
+        <!-- ATRACTIVOS DE RECOLETA -->
+        <section class="carrusel" aria-roledescription="carrusel" aria-label="Atractivos turísticos de Recoleta">
+            <button class="carrusel__flecha carrusel__flecha--izq" type="button" aria-label="Atractivo anterior">
+                <span aria-hidden="true">&#9664;</span>
+            </button>
+            <ul class="carrusel__pista">
+
+                <li class="carrusel__tarjeta" data-indice="0" data-posicion="centro">
+                    <img class="carrusel__imagen" src="img/web/index/atractivos_recoleta/1a-bellas_artes.jpg"
+                        alt="Fachada del Museo Nacional de Bellas Artes">
+                    <video class="carrusel__video" src="img/web/index/atractivos_recoleta/2a-bellas_artes.mp4" muted
+                        loop playsinline preload="metadata" aria-hidden="true"></video>
+                </li>
+
+                <li class="carrusel__tarjeta" data-indice="1" data-posicion="izquierda">
+                    <img class="carrusel__imagen" src="img/web/index/atractivos_recoleta/1c-floralis_generica.jpg"
+                        alt="Escultura Floralis Genérica con gente descansando en el parque">
+                    <video class="carrusel__video" src="img/web/index/atractivos_recoleta/2c-floralis_generica.mp4"
+                        muted loop playsinline preload="metadata" aria-hidden="true"></video>
+                </li>
+
+                <li class="carrusel__tarjeta" data-indice="2" data-posicion="derecha">
+                    <img class="carrusel__imagen" src="img/web/index/atractivos_recoleta/1b-jacaranda.png"
+                        alt="Jacarandá en flor frente a un edificio de estilo francés en Recoleta">
+                    <video class="carrusel__video" src="img/web/index/atractivos_recoleta/2b-jacaranda.mp4" muted loop
+                        playsinline preload="metadata" aria-hidden="true"></video>
+                </li>
+
+            </ul>
+
+            <button class="carrusel__flecha carrusel__flecha--der" type="button" aria-label="Atractivo siguiente">
+                <span aria-hidden="true">&#9654;</span>
+            </button>
+
+            <!-- Textos -->
+            <div class="carrusel__textos" aria-live="polite">
+
+                <article class="carrusel__texto carrusel__texto--activo" data-indice="0">
+                    <h2>Descubre el Museo Nacional de Bellas Artes</h2>
+                    <p>El MNBA alberga una de las colecciones de arte más importantes de Latinoamérica. Recorre sus
+                        salas y admira obras maestras desde el arte colonial hasta las vanguardias del siglo XX, todo en
+                        un edificio histórico frente al icónico Parque Thays.</p>
+                    <a href="#" class="info-atractivos">Más información</a>
+                </article>
+
+                <article class="carrusel__texto" data-indice="1">
+                    <h2>Ingeniería y movimiento bajo el sol</h2>
+                    <p>Una estructura monumental de acero y aluminio que dialoga con su entorno, abriendo y cerrando sus
+                        pétalos como un símbolo contemporáneo de la arquitectura y el espacio público.</p>
+                    <a href="#" class="info-atractivos">Más información</a>
+                </article>
+
+                <article class="carrusel__texto" data-indice="2">
+                    <h2>Bajo el cielo violeta de Buenos Aires</h2>
+                    <p>Cuando llega la primavera, las cúpulas de los jacarandás enmarcan los palacios y diagonales de
+                        Recoleta, transformando el espacio público en un corredor de postal y diseño natural.</p>
+                    <a href="#" class="info-atractivos">Más información</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- ANIMACIÓN CONOZCA RECOLETA -->
         <section class="hero-mascara">
             <div class="tira-fotos">
                 <img src="img/web/index/animacion/01_ccr.jpg" alt="Recoleta 1">
@@ -121,7 +217,76 @@
             </div>
         </section>
 
+        <!-- MAPA DE RECOLETA -->
+        <section class="mapa-recoleta-index">
+            <img src="img/vectores/mapa-recoleta.svg" alt="Mapa Recoleta" width="700px">
+            <div>
+                <h2 class="titulo-mapa"><strong>Explorá</strong> Recoleta</h2>
+                <ul class="listado-mapa">
+                    <li>
+                        <img src="img/vectores/icono-numero-1.svg" alt="Icono 1" class="lista-icono">
+                        <span>MARQ. Museo de Arquitectura y Diseño</span>
+                    </li>
+                    <li>
+                        <img src="img/vectores/icono-numero-2.svg" alt="Icono 2" class="lista-icono">
+                        <span>Feria Artesanal Plaza Francia</span>
+                    </li>
+                    <li>
+                        <img src="img/vectores/icono-numero-3.svg" alt="Icono 3" class="lista-icono">
+                        <span>Centro Cultural Recoleta</span>
+                    </li>
+                    <li>
+                        <img src="img/vectores/icono-numero-4.svg" alt="Icono 4" class="lista-icono">
+                        <span>Cementerio de la Recoleta</span>
+                    </li>
+                    <li>
+                        <img src="img/vectores/icono-numero-5.svg" alt="Icono 5" class="lista-icono">
+                        <span>Biblioteca Nacional Mariano Moreno</span>
+                    </li>
+                    <li>
+                        <img src="img/vectores/icono-numero-6.svg" alt="Icono 6" class="lista-icono">
+                        <span>Museo Nacional de Bellas Artes</span>
+                    </li>
+                    <li>
+                        <img src="img/vectores/icono-numero-7.svg" alt="Icono 7" class="lista-icono">
+                        <span>Facultad de Derecho UBA</span>
+                    </li>
+                    <li>
+                        <img src="img/vectores/icono-numero-8.svg" alt="Icono 8" class="lista-icono">
+                        <span>Floralis Genérica</span>
+                    </li>
+                </ul>
 
+                <ul class="places-list secondary">
+                    <li>
+                        <img src="img/vectores/icono-letra-a.svg" alt="Icono a" class="lista-icono">
+                        <span>Pasaje Suizo</span>
+                    </li>
+                    <li>
+                        <img src="img/vectores/icono-letra-b.svg" alt="Icono b" class="lista-icono">
+                        <span>Plaza Intendente Alvear</span>
+                    </li>
+                    <li>
+                        <img src="img/vectores/icono-letra-c.svg" alt="Icono b" class="lista-icono">
+                        <span>Plaza Intendente Alvear</span>
+                    </li>
+                    <li>
+                        <img src="img/vectores/icono-letra-d.svg" alt="Icono b" class="lista-icono">
+                        <span>Plaza Intendente Alvear</span>
+                    </li>
+                    <li>
+                        <img src="img/vectores/icono-letra-e.svg" alt="Icono b" class="lista-icono">
+                        <span>Plaza Intendente Alvear</span>
+                    </li>
+                    <li>
+                        <img src="img/vectores/icono-letra-s.svg" alt="Icono b" class="lista-icono">
+                        <span>Plaza Intendente Alvear</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- NOTICIAS DE RECOLETA -->
         <section class="ultimas-noticias">
             <h1>Últimas noticias</h1>
 
@@ -257,7 +422,6 @@
             </div>
         </section>
 
-
     </main>
 
     <footer>
@@ -265,7 +429,8 @@
             <div class="footer-superior">
                 <div class="footer-izquierda">
                     <h2>Conozca Recoleta</h2>
-                    <p>/ 1.997.523 visitas totales · 124 explorando ahora /</p>
+                    <p>/ <span class="destacado-footer">1.997.523</span> visitas totales · <span id="usuarios-activos"
+                            class="destacado-footer">124</span> explorando ahora /</p>
                 </div>
 
                 <div class="footer-derecha">
@@ -311,6 +476,7 @@
         <img class="footer-guarda" src="img/vectores/guarda.svg" alt="guarda">
     </footer>
 
+    <!-- SCRIPT SECCIÓN: NOTICIAS -->
     <script>
         const track = document.getElementById('track-noticias');
         const btnIzquierda = document.getElementById('btn-izq');
@@ -324,4 +490,83 @@
             track.scrollBy({ left: -375, behavior: 'smooth' });
         });
     </script>
+
+    <!-- SCRIPT SECCIÓN: ATRACTIVOS -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const carrusel = document.querySelector(".carrusel");
+            if (!carrusel) return;
+
+            const tarjetas = carrusel.querySelectorAll(".carrusel__tarjeta");
+            const textos = carrusel.querySelectorAll(".carrusel__texto");
+            const flechaIzq = carrusel.querySelector(".carrusel__flecha--izq");
+            const flechaDer = carrusel.querySelector(".carrusel__flecha--der");
+
+            const total = tarjetas.length;
+            let actual = 0;
+
+            function actualizarCarrusel() {
+                tarjetas.forEach(function (tarjeta) {
+                    const indice = Number(tarjeta.dataset.indice);
+                    const video = tarjeta.querySelector(".carrusel__video");
+
+                    if (indice === actual) {
+                        tarjeta.dataset.posicion = "centro";
+                    } else if (indice === (actual + 1) % total) {
+                        tarjeta.dataset.posicion = "izquierda";
+                    } else {
+                        tarjeta.dataset.posicion = "derecha";
+                    }
+
+                    if (!video) return;
+
+                    if (indice === actual) {
+                        video.currentTime = 0;
+                        const reproduccion = video.play();
+                        if (reproduccion !== undefined) {
+                            reproduccion.catch(function () { });
+                        }
+                    } else {
+                        video.pause();
+                    }
+                });
+
+                textos.forEach(function (texto) {
+                    const esActivo = Number(texto.dataset.indice) === actual;
+                    texto.classList.toggle("carrusel__texto--activo", esActivo);
+                });
+            }
+
+            flechaDer.addEventListener("click", function () {
+                actual = (actual + 1) % total;
+                actualizarCarrusel();
+            });
+
+            flechaIzq.addEventListener("click", function () {
+                actual = (actual - 1 + total) % total;
+                actualizarCarrusel();
+            });
+
+            actualizarCarrusel();
+        });
+    </script>
+
+    <!-- SCRIPT FOOTER: CONTADOR DE VISITAS (simulado) -->
+    <script>
+        setInterval(() => {
+            const spanActivos = document.getElementById('usuarios-activos');
+            if (!spanActivos) return;
+
+            let actual = parseInt(spanActivos.innerText);
+            let variacion = Math.floor(Math.random() * 3) - 1;
+            let nuevoValor = actual + variacion;
+
+            if (nuevoValor < 115) nuevoValor = 115;
+            if (nuevoValor > 135) nuevoValor = 135;
+
+            spanActivos.innerText = nuevoValor;
+        }, 3000);
+    </script>
+
 </body>
