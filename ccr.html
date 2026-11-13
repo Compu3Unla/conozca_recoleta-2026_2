@@ -11,7 +11,7 @@
 
 
 <body>
- <header>
+    <header>
         <nav class="header-container">
             <div class="header-logo">
                 <a href="index.html"><img src="img/vectores/header_logotipo.svg" alt="header-logotipo"
@@ -106,12 +106,12 @@
             </div>
             <article class="ccr-presentacion">
                 <div class="ccr-presentacion-text">
-                    <h1> <strong>Centro Cultural</strong> Recoleta</h1>
+                    <h1> <strong>Centro Cultural</strong><br>Recoleta</h1>
                     <h4>Junín 1930</h4>
                     <p>El <strong>Centro Cultural Recoleta</strong> es, desde comienzos de los años 80, un espacio
-                        emblemático de la vida
-                        de la Ciudad de Buenos Aires. Proyectado en un predio con 300 años de historia, su programación
-                        conecta tradición y vanguardia, y es visitado por más de medio millón de personas al año.
+                        emblemático de la vida de la Ciudad de Buenos Aires. Proyectado en un predio con 300 años de
+                        historia, su programación conecta tradición y vanguardia, y es visitado por más de medio millón
+                        de personas al año.
                         En sus 17 mil metros cuadrados conviven las artes visuales y las escénicas, la literatura, la
                         musica y la danza. Alberga muestras de artistas nacionales y extranjeros, cuenta con patios y
                         espacios de permanencia que funcionan como refugios urbanos y dispone de salas de baile y
@@ -124,27 +124,91 @@
 
         <section class="ccr-saber-que">
             <article class="ccr-saber-text">
-                Es bueno saber que...
-                <p>
-                    Este espacio cuenta con salas de artes visuales, un microcine, un auditorio, un anfiteatro, la
-                    histórica sala La Capilla, un laboratorio de música, zonas de estudio y una amplia terraza.
+                <p class="ccr-copete">Es bueno saber que...</p>
+                <p class="ccr-bloque-texto">
+                    Este espacio cuenta con salas de artes visuales, un microcine,
+                    un auditorio, un anfiteatro, la histórica sala La Capilla,
+                    un laboratorio de música, zonas de estudio y una amplia terraza.
                 </p>
             </article>
+
+            <div class="ccr-saber-mas-info">
+                <div class="ccr-horario">
+                    <h4>Horarios</h4>
+                    <p>
+                        Martes a viernes 12 a 21 h<br>
+                        Sábados, domingos y feriados 11 a 21 h<br>
+                        <strong>Lunes cerrado</strong>
+                    </p>
+                </div>
+
+                <div class="ccr-ingreso">
+                    <h4>Ingreso</h4>
+                    <p>
+                        Residentes en Argentina: sin cargo<br>
+                        No residentes en Argentina mayores de 12 años: $6.000<br>
+                        <strong>Sin cargo:</strong> Personas con discapacidad y acompañante
+                    </p>
+                </div>
+            </div>
         </section>
 
         <section class="ccr-video">
-            <!--ACÁ VA EL VIDEO DE CCR-->
+            <video autoplay muted loop playsinline>
+                <source src="img/web/arte/1g-ccr.mp4" type="video/mp4">
+            </video>
         </section>
 
         <section class="ccr-galeria">
+
             <article class="ccr-galeria-text">
                 <p>
-                    Experimentación, creación, memoria, participación y convivencia son algunos de los valores que
+                    <strong>Experimentación, creación, memoria, participación y convivencia</strong> son algunos de los
+                    valores que
                     determinan el cruce de las actividades que el CCR propone.
                 </p>
-            </article>
-        </section>
 
+                <a href="#" class="enlace-mas-info">
+                    Más información
+                </a>
+            </article>
+
+            <div class="ccr-galeria-carrucel">
+
+                <button class="flecha ccr-galeria-anterior" aria-label="Anterior">&lt;</button>
+
+                <div class="ccr-galeria-track">
+
+                    <div class="ccr-galeria-imagen">
+                        <img src="img/web/arte/1a-ccr.jpg" alt="Actividades del CCR">
+                    </div>
+
+                    <div class="ccr-galeria-imagen">
+                        <img src="img/web/arte/1b-ccr.jpg" alt="Actividades del CCR">
+                    </div>
+
+                    <div class="ccr-galeria-imagen">
+                        <img src="img/web/arte/1c-ccr.jpg" alt="Actividades del CCR">
+                    </div>
+
+                    <div class="ccr-galeria-imagen">
+                        <img src="img/web/arte/1d-ccr.jpg" alt="Actividades del CCR">
+                    </div>
+
+                    <div class="ccr-galeria-imagen">
+                        <img src="img/web/arte/1e-ccr.jpg" alt="Actividades del CCR">
+                    </div>
+
+                    <div class="ccr-galeria-imagen">
+                        <img src="img/web/arte/1f-ccr.jpg" alt="Actividades del CCR">
+                    </div>
+
+                </div>
+
+                <button class="flecha flecha-derecha ccr-galeria-siguiente" aria-label="Siguiente">&gt;</button>
+
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -197,4 +261,32 @@
         </section>
         <img class="footer-guarda" src="img/vectores/guarda.svg" alt="guarda">
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const imagenes = document.querySelectorAll(".ccr-galeria-imagen");
+            const btnIzquierda = document.querySelector(".ccr-galeria-anterior");
+            const btnDerecha = document.querySelector(".ccr-galeria-siguiente");
+
+            let indiceActual = 0;
+
+            function mostrarImagen(index) {
+                imagenes.forEach((img, i) => {
+                    img.style.display = i === index ? "block" : "none";
+                });
+            }
+            mostrarImagen(indiceActual);
+
+            btnDerecha.addEventListener("click", function () {
+                indiceActual = (indiceActual + 1) % imagenes.length;
+                mostrarImagen(indiceActual);
+            });
+
+            btnIzquierda.addEventListener("click", function () {
+                indiceActual = (indiceActual - 1 + imagenes.length) % imagenes.length;
+                mostrarImagen(indiceActual);
+            });
+        });
+    </script>
+
 </body>
